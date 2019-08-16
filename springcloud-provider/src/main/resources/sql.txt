@@ -1,0 +1,13 @@
+CREATE TABLE `dept` (
+  `dept_no` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `dept_name` varchar(255) DEFAULT NULL,
+  `db_source` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`dept_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+
+insert into dept (dept_name,db_source) values ("开发部",DATABASE());
+insert into dept (dept_name,db_source) values ("人事部",DATABASE());
+insert into dept (dept_name,db_source) values ("财务部",DATABASE());
+insert into dept (dept_name,db_source) values ("市场部",DATABASE());
+insert into dept (dept_name,db_source) values ("运维部",DATABASE());
