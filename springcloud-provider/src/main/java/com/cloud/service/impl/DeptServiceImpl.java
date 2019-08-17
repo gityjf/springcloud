@@ -31,7 +31,6 @@ public class DeptServiceImpl implements DeptService {
 
     @Override
     public List<Dept> list() {
-        System.out.println(123);
         return deptDao.findAll();
     }
 }

@@ -13,6 +13,8 @@
         <module>springcloud-api</module>
         <module>springcloud-provider</module>
         <module>springcloud-customer</module>
+        <module>springcloud-eureka</module>
+        <module>springcloud-customer-new</module>
     </modules>
 
     <properties>
@@ -44,7 +46,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.0.4</version>
+                <version>5.1.46</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -78,4 +80,12 @@
     </dependencyManagement>
 
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>
