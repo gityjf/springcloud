@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cloud.dao.DeptDao">
+
+    <resultMap id="deptMap" type="Dept">
+        <id property="dept_no" column="dept_no" javaType="LONG"/>
+        <result property="dept_name" column="dept_name" javaType="STRING"/>
+        <result property="db_source" column="db_source" javaType="STRING"/>
+    </resultMap>
+
+
+    <select id="findById" parameterType="Long" resultMap="deptMap">
+        select dept_no,dept_name,db_source from dept where dept_no = #{id};
+    </select>
+
+    <select id="findAll" resultMap="deptMap">
+        select dept_no,dept_name,db_source from dept;
+    </select>
+
+    <insert id="addDept" parameterType="Dept">
+        insert into dept (dept_name,db_source) values (#{dept_name},DATABASE());
+    </insert>
+
+</mapper>

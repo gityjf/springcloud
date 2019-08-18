@@ -26,7 +26,7 @@ eureka:
     service-url:
       defaultZone: http://www.eureka.com:7001/eureka
   instance:
-    instance-id: provider-server:8001                 #自定义服务名称信息
+    instance-id: provider-server-hystrix:8001                 #自定义服务名称信息
     prefer-ip-address: true                           #访问路径显示IP
 
 info:    #添加actuator依赖，在本地pom或parent pom 中添加  resources 样例查看 springcloud下pom build 配置

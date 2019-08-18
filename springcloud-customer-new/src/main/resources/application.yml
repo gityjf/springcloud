@@ -1,0 +1,11 @@
+server:
+  port: 9002
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://www.eureka.com:7001/eureka
+spring:
+  application:
+    name: customer-client

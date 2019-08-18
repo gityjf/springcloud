@@ -12,9 +12,13 @@
     <modules>
         <module>springcloud-api</module>
         <module>springcloud-provider</module>
-        <module>springcloud-customer</module>
         <module>springcloud-eureka</module>
         <module>springcloud-customer-new</module>
+        <module>springcloud-provider-8002</module>
+        <module>springcloud-provider-8003</module>
+        <module>springcloud-customer-feign</module>
+        <module>springcloud-provider-hystrix</module>
+        <module>springcloud-customer-hystrix-dashboard</module>
     </modules>
 
     <properties>

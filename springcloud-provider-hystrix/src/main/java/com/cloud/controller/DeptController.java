@@ -2,6 +2,7 @@ package com.cloud.controller;
 
 import com.cloud.po.Dept;
 import com.cloud.service.DeptService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -31,7 +32,11 @@ public class DeptController {
 
     @RequestMapping(value = "/provider/get/{id}", method = RequestMethod.GET)
     public Dept get(@PathVariable("id") Long id) {
-        return deptService.get(id);
+        Dept dept = deptService.get(id);
+        if (dept == null) {
+            throw new RuntimeException("空指针");
+        }
+        return dept;
     }
 
     @RequestMapping(value = "/provider/list", method = RequestMethod.GET)

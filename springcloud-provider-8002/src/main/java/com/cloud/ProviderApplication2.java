@@ -15,9 +15,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient     //服务注册
 @EnableDiscoveryClient  //服务发现
 @MapperScan("com.cloud.dao")
-public class ProviderApplication {
+public class ProviderApplication2 {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class,args);
+        SpringApplication.run(ProviderApplication2.class,args);
     }
 }

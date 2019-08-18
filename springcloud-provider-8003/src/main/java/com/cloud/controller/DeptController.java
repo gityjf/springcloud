@@ -41,6 +41,11 @@ public class DeptController {
 
     @RequestMapping(value = "/provider/discovery", method = RequestMethod.GET)
     public Object discovery() {
+        List<String> services = discoveryClient.getServices();
+        List<ServiceInstance> instances = discoveryClient.getInstances("provider-server");
+        for (ServiceInstance serviceInstance: instances) {
+
+        }
         return this.discoveryClient;
     }
 }
